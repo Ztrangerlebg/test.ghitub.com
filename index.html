@@ -1,47 +1,100 @@
-<main class="main">
-    <div class="header">
-      <div class="logo">
-        <h2>Kickdart <span>Dev</span></h2>
-      </div>
-      <ul class="menu">
-        <li>Services</li>
-        <li>Commander</li>
-        <li>En savoir plus</li>
-        <li><a target="_blank" href="https://discord.gg/T5Ksu8F8hR">Contactez-nous</a></li>
-      </ul>
-    </div>
-    <!-------------------------------------------
-              # Section Banner
-              ------------------------------------------->
-    <section class="banner">
-      <div class="textBox">
-        <h1>Bienvenue sur le site <br> de kickdart dev</h1>
-        <p>Kickdart c'est quoi ? C'est un serveur discord avec son propre hébergeur et pleins de services à bas prix ! Vous pouvez aussi vendre votre service pour avoir plus de client .
-        </p>
-      </div>
-      <div class="imgBox">
-        <img src="https://img.icons8.com/material-sharp/452/cloud-development.png" alt="Kickdart dev">
-      </div>
-    </section>
-    <!-------------------------------------------
-              # Section Cards
-              ------------------------------------------->
-    <section class="cards">
-      <div class="card">
-        <h3>hébergeur</h3>
-        <p>Un hébergeur pas très cher est disponible directement dans le serveur
-        </p>
-      </div>
-      <div class="card">
-        <h3>Giveway</h3>
-        <p>Des giveway sont fait toutes les semaines pour gagner des service payant mais gratuitement...
-        </p>
-      </div>
-      <div class="card">
-        <h3>Support</h3>
-        <p>Un support très fiable , à l'écoute et rapide
-        </p>
-      </div>
-    </section>
-  </main>
-  <link rel="stylesheet" href="main.css">
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  color: #000;
+  font-family: 'Caveat', cursive;
+}
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: bottom;
+}
+.message {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffccff;
+  color: #5c2e5c;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.love {
+  cursor: pointer;
+  padding: 50px;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+}
+h1,
+p {
+  margin: 0;  
+}
+p {
+  margin-top: -20px;
+}
+p.final {
+  text-align:center;
+  margin: 20px auto;
+  font-size: 2em;
+  font-weight: 200;
+}
+h1 {
+  font-weight: 400;
+  font-size: 2.7em;
+}
+span {
+  float: left;
+  display:block;
+  width: 100px;
+  height: 100px;
+}
+.text {
+  font-size: 2.5em;
+  line-height:100px;
+  width: 30px;
+}
+.heart {
+  text-indent:-99999px;
+  margin-left: -35px;
+  margin-right: -32px;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+}
+.message:hover,
+.message:focus,
+.message:active {  
+  background: #bf9fdf;
+  color:#000;
+}
+.message:hover .heart,
+.message:focus .heart,
+.message:active .heart {
+  background-position: -2800px 0;  
+  -webkit-transition: background 1s steps(28);
+  -moz-transition: background 1s steps(28);
+  -o-transition: background 1s steps(28);
+  -ms-transition: background 1s steps(28);
+  transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
